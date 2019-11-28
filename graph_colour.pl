@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% USEAGE: graph-colour(nodes, edges, numColours)
+% USEAGE: graph_colour(nodes, edges, numColours, Result)
 %   nodes: [node(, node)*]
 %   edges: [edge(, edge)*]
 %   edge:  [node, node]
 %   node:  (a-z)+(0-9)*
 %   numColours: (1-9)(0-9)*
+% Result will return the assignments of nodes to colours in a map.
 % EXAMPLE: graph_colour([n1, n2, n3, n4, n5, n6], [[n1, n3], [n2, n3], [n3, n4], [n3, n5], [n4, n6], [n5, n6]], 2, R).
 %
 % Graph Colour is one of the most famous NP-Complete problems. It's also one of the easiest to understand.
 % Given a description of a graph G=<V,E>, and the number of colours numColours, determine if the graph can
 % be coloured using only those numColours, where nodes connected by an edge cannot have the same colour.
-%
-% Since SAT is NP-Complete, graph colour can be solved using sat.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- module(graph_colour, [graph_colour/4]).
 :- use_module(library(map)).

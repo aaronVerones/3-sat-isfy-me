@@ -9,6 +9,7 @@
 % Subset Sum is another famous NP-Complete problem, likely because the task sounds so simple!
 % The goal is to find a subset of any length from the given set that add up to the sum.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- module(subset_sum, [subset_sum/3]).
 
 % Solves Subset Sum
 subset_sum(_, 0, []).
